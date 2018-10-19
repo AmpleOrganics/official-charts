@@ -158,6 +158,8 @@ service:
   loadBalancerIP: ""
   loadBalancerSourceRanges: []
   type: ClusterIP
+  ## Specify the port used when using NodePort
+  # nodePortPort: 
 
 ## Statefulsets rolling update update strategy
 ## Ref: https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/#rolling-update
