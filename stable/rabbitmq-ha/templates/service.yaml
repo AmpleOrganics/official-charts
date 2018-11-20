@@ -38,6 +38,9 @@ spec:
     - name: amqp
       protocol: TCP
       port: {{ .Values.rabbitmqNodePort }}
+    {{- if eq (.Values.service.type | toString) "NodePort" }}
+      nodePort: {{ .Values.service.nodePortPortAmqp }}
+    {{- end }}
       targetPort: amqp
     - name: epmd
       protocol: TCP
